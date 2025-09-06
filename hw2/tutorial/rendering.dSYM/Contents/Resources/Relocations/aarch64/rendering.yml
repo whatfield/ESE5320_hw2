@@ -1,0 +1,31 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     rendering
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000019CC, symSize: 0xA8 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _triangle_3ds, symObjAddr: 0xA8, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x2D0D, offset: 0x2D0D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000019CC, symSize: 0xA8 }
+  - { offsetInCU: 0x26, offset: 0x2DF3, size: 0x8, addend: 0x0, symName: __Z11print_usagePc, symObjAddr: 0x0, symBinAddr: 0x100001A74, symSize: 0x30 }
+  - { offsetInCU: 0x28B9, offset: 0x5686, size: 0x8, addend: 0x0, symName: __Z11print_usagePc, symObjAddr: 0x0, symBinAddr: 0x100001A74, symSize: 0x30 }
+  - { offsetInCU: 0x2DFE, offset: 0x84AD, size: 0x8, addend: 0x0, symName: __ZNSt3__124__put_character_sequenceB8ue170006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m, symObjAddr: 0x394, symBinAddr: 0x100001E38, symSize: 0x168 }
+  - { offsetInCU: 0x56B9, offset: 0xAD68, size: 0x8, addend: 0x0, symName: __ZNSt3__116__pad_and_outputB8ue170006IcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_, symObjAddr: 0x4FC, symBinAddr: 0x100001FA0, symSize: 0x194 }
+  - { offsetInCU: 0x5F95, offset: 0xB644, size: 0x8, addend: 0x0, symName: __ZNSt3__120__throw_length_errorB8ue170006EPKc, symObjAddr: 0x6A4, symBinAddr: 0x100002148, symSize: 0x50 }
+  - { offsetInCU: 0x8665, offset: 0xDD14, size: 0x8, addend: 0x0, symName: __Z13check_resultsPA256_h, symObjAddr: 0x0, symBinAddr: 0x100001AA4, symSize: 0x2FC }
+  - { offsetInCU: 0x89A8, offset: 0xE057, size: 0x8, addend: 0x0, symName: __ZNSt3__114basic_ofstreamIcNS_11char_traitsIcEEED1Ev, symObjAddr: 0x2FC, symBinAddr: 0x100001DA0, symSize: 0x8C }
+  - { offsetInCU: 0x8E4B, offset: 0xE4FA, size: 0x8, addend: 0x0, symName: __ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_length_errorB8ue170006Ev, symObjAddr: 0x690, symBinAddr: 0x100002134, symSize: 0x14 }
+  - { offsetInCU: 0x8E74, offset: 0xE523, size: 0x8, addend: 0x0, symName: __ZNSt3__120__throw_length_errorB8ue170006EPKc, symObjAddr: 0x6A4, symBinAddr: 0x100002148, symSize: 0x50 }
+  - { offsetInCU: 0x8E80, offset: 0xE52F, size: 0x8, addend: 0x0, symName: __ZNSt12length_errorC1B8ue170006EPKc, symObjAddr: 0x6F4, symBinAddr: 0x100002198, symSize: 0x24 }
+  - { offsetInCU: 0x33, offset: 0xE5FA, size: 0x8, addend: 0x0, symName: __Z8zcullingiP14CandidatePixeliP5Pixel, symObjAddr: 0x3FC, symBinAddr: 0x1000025B8, symSize: 0xC4 }
+  - { offsetInCU: 0x53, offset: 0xE61A, size: 0x8, addend: 0x0, symName: __ZZ8zcullingiP14CandidatePixeliP5PixelE8z_buffer, symObjAddr: 0x222B0, symBinAddr: 0x10000F038, symSize: 0x0 }
+  - { offsetInCU: 0x6ABB, offset: 0x15082, size: 0x8, addend: 0x0, symName: __Z15check_clockwise11Triangle_2D, symObjAddr: 0x0, symBinAddr: 0x1000021BC, symSize: 0x34 }
+  - { offsetInCU: 0x6AE3, offset: 0x150AA, size: 0x8, addend: 0x0, symName: __Z18clockwise_verticesP11Triangle_2D, symObjAddr: 0x34, symBinAddr: 0x1000021F0, symSize: 0x10 }
+  - { offsetInCU: 0x6B24, offset: 0x150EB, size: 0x8, addend: 0x0, symName: __Z17pixel_in_trianglehh11Triangle_2D, symObjAddr: 0x44, symBinAddr: 0x100002200, symSize: 0x7C }
+  - { offsetInCU: 0x6B70, offset: 0x15137, size: 0x8, addend: 0x0, symName: __Z8find_minhhh, symObjAddr: 0xC0, symBinAddr: 0x10000227C, symSize: 0x14 }
+  - { offsetInCU: 0x6B9C, offset: 0x15163, size: 0x8, addend: 0x0, symName: __Z8find_maxhhh, symObjAddr: 0xD4, symBinAddr: 0x100002290, symSize: 0x14 }
+  - { offsetInCU: 0x6BC8, offset: 0x1518F, size: 0x8, addend: 0x0, symName: __Z10projection11Triangle_3DP11Triangle_2Di, symObjAddr: 0xE8, symBinAddr: 0x1000022A4, symSize: 0x118 }
+  - { offsetInCU: 0x6CE2, offset: 0x152A9, size: 0x8, addend: 0x0, symName: __Z14rasterization111Triangle_2DPhPi, symObjAddr: 0x200, symBinAddr: 0x1000023BC, symSize: 0xF4 }
+  - { offsetInCU: 0x6E0D, offset: 0x153D4, size: 0x8, addend: 0x0, symName: __Z14rasterization2bPhPi11Triangle_2DP14CandidatePixel, symObjAddr: 0x2F4, symBinAddr: 0x1000024B0, symSize: 0x108 }
+  - { offsetInCU: 0x6F27, offset: 0x154EE, size: 0x8, addend: 0x0, symName: __Z10coloringFBiiP5PixelPA256_h, symObjAddr: 0x4C0, symBinAddr: 0x10000267C, symSize: 0x78 }
+  - { offsetInCU: 0x7372, offset: 0x15939, size: 0x8, addend: 0x0, symName: __Z23rendering_sw_with_timerP11Triangle_3DPA256_h, symObjAddr: 0x538, symBinAddr: 0x1000026F4, symSize: 0xCAC }
+  - { offsetInCU: 0x86BB, offset: 0x16C82, size: 0x8, addend: 0x0, symName: __Z12rendering_swP11Triangle_3DPA256_h, symObjAddr: 0x11E4, symBinAddr: 0x1000033A0, symSize: 0x414 }
+...
