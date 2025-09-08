@@ -10,13 +10,34 @@
 
 uint64_t hash_func(unsigned char *input, unsigned int pos)
 {
-	// put your hash function implementation here
+	uint64_t hash = 0;
+	for(int i = 0; i < WIN_SIZE; i++)
+	{
+		hash += (uint64_t)(input[pos+WIN_SIZE-1-i]) * (u_int64_t)(pow(PRIME, i+1));
+	}
+	return hash;
 }
 
 void cdc(unsigned char *buff, unsigned int buff_size)
 {
-	// put your cdc implementation here
+	for (int i = WIN_SIZE; i < buff_size - WIN_SIZE; i++){
+		uint64_t hash = hash_func(buff, i);
+		if(hash % MODULUS == TARGET){
+			printf("%d\n", i);
+		}
+	}
+}
 
+void cdc_revised(unsigned char *buff, unsigned int buff_size){
+	uint64_t hash = hash_func(buff, WIN_SIZE);
+	uint64_t hash_next;
+	for (int i = WIN_SIZE; i < buff_size - WIN_SIZE; i++){
+		if(hash % MODULUS == TARGET){
+			printf("%d\n", i);
+		}
+		hash_next = hash*PRIME - (uint64_t)buff[i]*pow(PRIME, WIN_SIZE+1)+(uint64_t)buff[i+WIN_SIZE]*PRIME;
+		hash = hash_next;
+	}
 }
 
 void test_cdc( const char* file )
@@ -41,7 +62,7 @@ void test_cdc( const char* file )
 
 	int bytes_read = fread(&buff[0],sizeof(unsigned char),file_size,fp);
 
-	cdc(buff, file_size);
+	cdc_revised(buff, file_size);
 
     free(buff);
     return;
