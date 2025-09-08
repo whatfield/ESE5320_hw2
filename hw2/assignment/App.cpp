@@ -1,11 +1,13 @@
 #include "App.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "stopwatch.h"
 
 #define DATA_SIZE (12000 * 8000)
 #define STAGES (4)
 
 unsigned char * Data[STAGES + 1];
+
 
 void Exit_with_error(void)
 {
