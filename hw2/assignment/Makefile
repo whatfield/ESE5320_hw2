@@ -21,7 +21,7 @@ LFLAGS =
 LIBS =
 
 # define the C source files
-SRCS = ./Compress.c ./Differentiate.c ./Scale.c ./Filter.c ./App.cpp
+SRCS = ./Compress.c ./Differentiate.c ./Scale.c ./Filter.c ./App.c
 
 # define the C object files
 #

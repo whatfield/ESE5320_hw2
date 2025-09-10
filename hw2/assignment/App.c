@@ -8,6 +8,10 @@
 
 unsigned char * Data[STAGES + 1];
 
+stopwatch scale;
+stopwatch differentiate;
+stopwatch compress;
+
 
 void Exit_with_error(void)
 {
@@ -52,18 +56,33 @@ int main()
       Exit_with_error();
   }
   Load_data();
+
+  scale.start();
   Scale(Data[0], Data[1]);
+  scale.stop();
   Filter(Data[1], Data[2]);
+  differentiate.start();
   Differentiate(Data[2], Data[3]);
+  differentiate.stop();
+  compress.start();
   int Size = Compress(Data[3], Data[4]);
+  compress.stop();
+
   Store_data("Output.bin", 4, Size);
+
+  printf("Average latency of scale is: %lf ns.\n", scale.avg_latency());
+  printf("Average latency of differentiate is: %lf ns.\n", differentiate.avg_latency());
+  printf("Average latency of compress is: %lf ns.\n", compress.avg_latency());
+
 
   for (int i = 0; i <= STAGES; i++)
     free(Data[i]);
 
   puts("Application completed successfully.");
 
+  
   return EXIT_SUCCESS;
 }
+
 
 

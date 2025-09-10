@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "App.h"
+#include "stopwatch.h"
+
 #define INPUT_HEIGHT (4000)
 #define INPUT_WIDTH (6000)
 
@@ -35,11 +37,22 @@ void Filter_vertical(const unsigned char * Input, unsigned char * Output)
     }
 }
 
+stopwatch filter_horiz;
+stopwatch filter_vert;
+
 void Filter(const unsigned char * Input, unsigned char * Output)
 {
   unsigned char * Temp = (unsigned char*)malloc(INPUT_HEIGHT * OUTPUT_WIDTH);
+  filter_horiz.start();
   Filter_horizontal(Input, Temp);
+  filter_horiz.stop();
+  filter_vert.start();
   Filter_vertical(Temp, Output);
+  filter_vert.stop();
+
+  printf("Average latency of horizontal filter is: %lf ns.\n", filter_horiz.avg_latency());
+  printf("Average latency of vertical filter is: %lf ns.\n", filter_vert.avg_latency());
+
   free(Temp);
 }
 
