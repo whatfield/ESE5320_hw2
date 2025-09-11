@@ -101,7 +101,6 @@ void test_cdc_revised( const char* file )
 	cdc_revised(buff, file_size);
 	cdc_time_revised.stop();
 	
-
     free(buff);
     return;
 }
