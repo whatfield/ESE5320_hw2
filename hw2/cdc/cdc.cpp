@@ -69,7 +69,7 @@ void test_cdc( const char* file )
 	cdc_time.start();
 	cdc(buff, file_size);
 	cdc_time.stop();
-	printf("Average latency of cdc is: %lf ns.\n", cdc_time.avg_latency());
+	
 
     free(buff);
     return;
@@ -100,7 +100,7 @@ void test_cdc_revised( const char* file )
 	cdc_time_revised.start();
 	cdc_revised(buff, file_size);
 	cdc_time_revised.stop();
-	printf("Total latency of cdc_revised is: %lf ns.\n", cdc_time_revised.avg_latency());
+	
 
     free(buff);
     return;
@@ -111,5 +111,7 @@ int main()
 {
 	test_cdc("prince.txt");
 	test_cdc_revised("prince.txt");
+	printf("Average latency of cdc is: %lf ns.\n", cdc_time.avg_latency());
+	printf("Average latency of cdc_revised is: %lf ns.\n", cdc_time_revised.avg_latency());
 	return 0;
 }
