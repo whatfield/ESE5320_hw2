@@ -62,7 +62,7 @@ $(MAIN): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 clean:
-	$(RM) -rf perf* Output.bin *.txt *.out *.o *~ $(MAIN) $(GPROF_MAIN)
+	$(RM) -rf perf* Output.bin *.out *.o *~ $(MAIN) $(GPROF_MAIN)
 
 depend: $(SRCS)
 	makedepend $(INCLUDES) $^
